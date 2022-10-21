@@ -1,0 +1,213 @@
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Registry Management System</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!--PEN HEADER-->
+<header class="header">
+  <h1 class="header__title">Registry Management System</h1>
+  
+</header>
+<div class="content">
+  <div class="content__inner">
+    <div class="container">
+      <h2 class="content__title">Click on steps or 'Prev' and 'Next' buttons</h2>
+    </div>
+    <div class="container overflow-hidden">
+      <div class="multisteps-form">
+        <div class="row">
+          <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+            <div class="multisteps-form__progress">
+              <button class="multisteps-form__progress-btn js-active" type="button" title="Buyer Info">Buyer Info</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Seller Info">Seller Info</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Order Info">Review</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Order">Final</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-8 m-auto">
+            <form action="#" id="buyerInfo" class="multisteps-form__form" method="post" >
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Buyer Info</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="number" placeholder="CNIC" name="cnic" id="cnic" />
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="Name" name="name" id="name"/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="Address" name="address" id="address"/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="email" placeholder="City" name="city" id="city"/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="tel" placeholder="Phone" name="phone" id="phone"/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="number" placeholder="Khasra #" id="khasra"/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="House Area" name="housearea" id="houseArea"/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" type="text" placeholder="House Size" name="housesize" id="houseSize"/>
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary ml-auto js-btn-next" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Seller Info</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="form-row mt-4">
+                      <div class="col-12 col-sm-6">
+                        <input class="multisteps-form__input form-control" type="number" placeholder="CNIC" name="sellerCnic" id="sellerCnic" />
+                      </div>
+                      
+                      <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input form-control" type="text" placeholder="Name" name="name" id="sellerName"/>
+                      </div>
+                    </div>
+                    <div class="form-row mt-4">
+                      <div class="col-12 col-sm-6">
+                        <input class="multisteps-form__input form-control" type="text" placeholder="Address" name="address" id="sellerAddress"/>
+                      </div>
+                      <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input form-control" type="email" placeholder="City" name="city" id="sellerCity"/>
+                      </div>
+                    </div>
+                    <div class="form-row mt-4">
+                      <div class="col-12 col-sm-6">
+                        <input class="multisteps-form__input form-control" type="tel" placeholder="Phone" name="phone" id="sellerPhone"/>
+                      </div>
+                      <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input form-control" type="number" placeholder="Khasra #"/>
+                      </div>
+                    </div>
+                    <div class="form-row mt-4">
+                      <div class="col-12 col-sm-6">
+                        <input class="multisteps-form__input form-control" type="text" placeholder="House Area" name="housearea" id="sellerHouseArea"/>
+                      </div>
+                      <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                        <input class="multisteps-form__input form-control" type="text" placeholder="House Size" name="housesize"id="sellerHouseSize"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button type="submit" class="btn btn-primary ml-auto js-btn-next"  title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Your Order Info</h3>
+                <div class="multisteps-form__content">
+                  <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                      <div class="card shadow-sm">
+                        <div class="card-body">
+                          <h5 class="card-title">Item Title</h5>
+                          <p class="card-text">Small and nice item description</p><a class="btn btn-primary" href="#" title="Item Link">Item Link</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="button-row d-flex mt-4 col-12">
+                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                      <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Additional Comments</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <textarea class="multisteps-form__textarea form-control" placeholder="Additional Comments and Requirements"></textarea>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-success ml-auto" type="button" title="Send">Send</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+<script  src="./script.js"></script>
+<script>
+
+let buyerForm = document.getElementById('buyerInfo');
+buyerForm.addEventListener('submit', (e)=> {
+  e.preventDefault();
+
+  //Getting Buyer Info
+  var cnic = document.getElementById('cnic')
+  var name = document.getElementById('name')
+  var address = document.getElementById('address')
+  var city = document.getElementById('city')
+  var phone = document.getElementById('phone')
+  var khasra = document.getElementById('khasra')
+  var houseArea = document.getElementById('houseArea')
+  var houseSize = document.getElementById('houseSize')
+  //Getting Seller Info
+  var sellerCnic = document.getElementById('sellerCnic')
+  var sellerName = document.getElementById('sellerName')
+  var sellerAddress = document.getElementById('sellerAddress')
+  var sellerCity = document.getElementById('sellerCity')
+  var sellerPhone = document.getElementById('sellerPhone')
+  var sellerHouseSize = document.getElementById('sellerHouseSize')
+  var sellerHouseArea = document.getElementById('sellerHouseArea')
+  
+  
+
+  let data = {
+    cnic: cnic.value,
+    name:name.value,
+    address:address.value,
+    city:city.value,
+    phone:phone.value,
+    khasra:khasra.value,
+    houseArea:houseArea.value,
+    houseSize:houseSize.value,
+    sellerCnic:sellerCnic.value,
+    sellerName:sellerName.value,
+    sellerAddress:sellerAddress.value,
+    sellerCity:sellerCity.value,
+    sellerPhone:sellerPhone.value,
+    sellerHouseSize:sellerHouseSize.value,
+    sellerHouseArea:sellerHouseArea.value
+  }
+  console.log(data);
+});
+</script>
+</body>
+</html>
