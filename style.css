@@ -15,13 +15,23 @@ body a {
 }
 label {
   display: inline-block;
-  margin-bottom: 0.5rem;
   margin-right: 50px;
   margin-left: 50px;
 }
 .my-label{
   margin-left: -12px;
   color: grey;
+}
+
+.label-text{
+  margin-left: -13px;
+}
+.tax-label{
+  margin-right: 10px;
+  margin-left: -10px;
+}
+.property-type{
+  width: 1.1rem;
 }
 .header__btn {
   transition-property: all;

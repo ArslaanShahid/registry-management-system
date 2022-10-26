@@ -77,13 +77,13 @@
                     </div>
                     <div class="form-row mt-2 justify-content-center">
                       <div class="radio-button">
-                        <label for="property type">
-                          House
+                        <label class="property-type">
+                          <span class="label-text">House</span>
                           <input class="multisteps-form__input form-control" type="radio" value="house" label="House"
                             placeholder="House" name="house" id="propertyType" />
                         </label>
-                        <label for="property type">
-                          Land
+                        <label class="property-type">
+                          <span class="label-text">Land</span>
                           <input class="multisteps-form__input form-control" type="radio" value="land" label="House"
                             placeholder="House" name="house" id="propertyType" />
                         </label>
@@ -119,7 +119,6 @@
                 <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
                   <h3 class="multisteps-form__title">Seller Info</h3>
                   <div class="multisteps-form__content">
-                    <div class="form-row mt-4">
                       <div class="form-row mt-4">
                         <div class="col-12 col-sm-6">
                           <input class="multisteps-form__input form-control" type="number" placeholder="CNIC"
@@ -150,17 +149,32 @@
                           <input class="multisteps-form__input form-control" type="number" placeholder="Khasra #" />
                         </div>
                       </div>
-                      <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6">
-                          <input class="multisteps-form__input form-control" type="text" placeholder="Property Area"
-                            name="sellerpropertyrea" id="sellerpropertyArea" />
-                        </div>
-                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                          <input class="multisteps-form__input form-control" type="text" placeholder="Property Size"
-                            name="sellepropertysize" id="sellerpropertySize" />
+                      <div class="form-row mt-4"></div>
+
+                      <div class="col-12 col-sm-6">
+                        <label class="tax-label" for="form-control">Tax Filer Type</label>
+                      </div>
+                      <div class="form-row mt-2 justify-content-center">
+                        <div class="radio-button">
+                          <label class="property-type">
+                            <span class="tax-label">Filer</span>
+                            <input class="multisteps-form__input form-control" type="radio" value="Filer" label="filer"
+                              placeholder="House" name="house" id="filer" />
+                          </label>
+                          <label class="property-type">
+                            <span class="tax-label">Non</span>
+                            <input class="multisteps-form__input form-control" type="radio" value="NonFiler" label="nonfiler"
+                              placeholder="House" name="nonfiler" id="nonFiler" />
+                          </label>
                         </div>
                       </div>
-                    </div>
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-12">
+                          <input class="multisteps-form__input form-control" type="number" placeholder="Enter Gain Tax"
+                            name="sellerpropertyrea" id="sellerpropertyArea" />
+                        </div>
+                      
+                      </div>
                     <div class="button-row d-flex mt-4">
                       <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
                       <button type="submit" class="btn btn-primary ml-auto js-btn-next" title="Next">Next</button>
