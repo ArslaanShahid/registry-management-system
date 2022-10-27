@@ -287,9 +287,8 @@
       var sellerAddress = document.getElementById('sellerAddress')
       var sellerCity = document.getElementById('sellerCity')
       var sellerPhone = document.getElementById('sellerPhone')
-      var sellerpropertyArea = document.getElementById('sellerpropertyArea')
-      var sellerpropertySize = document.getElementById('sellerpropertySize')
       var taxType= document.getElementById('taxType')
+      var gainTax= document.getElementById('gainTax')
 
 
 
@@ -308,18 +307,17 @@
         advanceTax:advanceTax.value,
         determinism:determinism.value
       }
-      let salerInfo= {
+      let sellerInfo= {
         sellerCnic: sellerCnic.value,
         sellerName: sellerName.value,
         sellerAddress: sellerAddress.value,
         sellerCity: sellerCity.value,
         sellerPhone: sellerPhone.value,
-        sellerpropertyArea: sellerpropertyArea.value,
-        sellerpropertySize: sellerpropertySize.value,
-        taxType:taxType.value
+        taxType:taxType.value,
+        gainTax:gainTax.value
       }
       console.log(buyerInfo);
-      console.log(salerInfo);
+      console.log(sellerInfo);
     });
   </script>
 </body>
