@@ -124,7 +124,7 @@
                       </div>
                       <div class="col-12 col-sm-6 mt-4 mt-sm-0">
                         <input class="multisteps-form__input form-control" type="number" placeholder="Determinism"
-                          name="Determinism" id="Determinism" />
+                          name="Determinism" id="determinism" />
                       </div>
                     </div>
                     <div class="form-row mt-4">
@@ -160,14 +160,14 @@
                         </div>
 
                         <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                          <input class="multisteps-form__input form-control" type="text" placeholder="Name" name="name"
+                          <input class="multisteps-form__input form-control" type="text" placeholder="Seller Name" name="name"
                             id="sellerName" />
                         </div>
                       </div>
                       <div class="form-row mt-4">
                         <div class="col-12 col-sm-6">
                           <input class="multisteps-form__input form-control" type="text" placeholder="Address"
-                            name="address" id="sellerAddress" />
+                            name="sellerAddress" id="sellerAddress" />
                         </div>
                         <div class="col-12 col-sm-6 mt-4 mt-sm-0">
                           <input class="multisteps-form__input form-control" type="email" placeholder="City" name="city"
@@ -180,7 +180,7 @@
                             id="sellerPhone" />
                         </div>
                         <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                          <input class="multisteps-form__input form-control" type="number" placeholder="Khasra #" />
+                          <input class="multisteps-form__input form-control" type="number" placeholder="Khasra #" id="khasra"/>
                         </div>
                       </div>
                       <div class="form-row mt-4"></div>
@@ -192,20 +192,18 @@
                         <div class="radio-button">
                           <label class="property-type">
                             <span class="tax-label">Filer</span>
-                            <input class="multisteps-form__input form-control" type="radio" value="Filer" label="filer"
-                              placeholder="House" name="house" id="filer" />
+                            <input class="multisteps-form__input form-control" type="radio" value="Filer" name="taxType" id="taxType" />
                           </label>
                           <label class="property-type">
                             <span class="tax-label">Non</span>
-                            <input class="multisteps-form__input form-control" type="radio" value="NonFiler" label="nonfiler"
-                              placeholder="House" name="nonfiler" id="nonFiler" />
+                            <input class="multisteps-form__input form-control" type="radio" value="NonFiler" name="taxType" id="taxType" />
                           </label>
                         </div>
                       </div>
                       <div class="form-row mt-4">
                         <div class="col-12 col-sm-12">
                           <input class="multisteps-form__input form-control" type="number" placeholder="Enter Gain Tax"
-                            name="sellerpropertyrea" id="sellerpropertyArea" />
+                            name="gainTax" id="gainTax" />
                         </div>
                       
                       </div>
@@ -278,6 +276,11 @@
       var propertyArea = document.getElementById('propertyArea')
       var propertySize = document.getElementById('propertySize')
       var propertyType = document.getElementById('propertyType')
+      var propertyAmount = document.getElementById('propertyAmount')
+      var totalAmount = document.getElementById('totalAmount')
+      var advanceTax = document.getElementById('advanceTax')
+      var pt1=document.getElementById('pt1')
+      var determinism= document.getElementById('determinism')
       //Getting Seller Info
       var sellerCnic = document.getElementById('sellerCnic')
       var sellerName = document.getElementById('sellerName')
@@ -286,10 +289,11 @@
       var sellerPhone = document.getElementById('sellerPhone')
       var sellerpropertyArea = document.getElementById('sellerpropertyArea')
       var sellerpropertySize = document.getElementById('sellerpropertySize')
+      var taxType= document.getElementById('taxType')
 
 
 
-      let data = {
+      let buyerInfo = {
         cnic: cnic.value,
         name: name.value,
         address: address.value,
@@ -299,15 +303,23 @@
         propertyArea: propertyArea.value,
         propertySize: propertySize.value,
         propertyType: propertyType.value,
+        propertyAmount: propertyAmount.value,
+        totalAmount:totalAmount.value,
+        advanceTax:advanceTax.value,
+        determinism:determinism.value
+      }
+      let salerInfo= {
         sellerCnic: sellerCnic.value,
         sellerName: sellerName.value,
         sellerAddress: sellerAddress.value,
         sellerCity: sellerCity.value,
         sellerPhone: sellerPhone.value,
         sellerpropertyArea: sellerpropertyArea.value,
-        sellerpropertySize: sellerpropertySize.value
+        sellerpropertySize: sellerpropertySize.value,
+        taxType:taxType.value
       }
-      console.log(data);
+      console.log(buyerInfo);
+      console.log(salerInfo);
     });
   </script>
 </body>
