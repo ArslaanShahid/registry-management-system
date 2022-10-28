@@ -292,6 +292,7 @@
 
 
 
+
       let buyerInfo = {
         cnic: cnic.value,
         name: name.value,
@@ -317,8 +318,18 @@
         gainTax:gainTax.value
       }
 
-      advanceTax_field.addEventListener('input', (e)=>{
-        let get_adv = (advanceTax_field.value )
+      let AdvtaxField = document.getElementById('advanceTax');
+      getPropertyAmount = propertyAmount.value;  
+      console.log(getPropertyAmount)
+
+      let getTotal= document.getElementById('totalAmount').innerHTML = "hello";
+      console.log(getTotal.value);
+        AdvtaxField.addEventListener('input', (e) => {
+        var nonFiler = 6;
+        let getTax = getPropertyAmount.value * nonFiler.value;
+        AdvtaxField.value = getTax;
+        console.log(AdvtaxField)
+
       })
       console.log(buyerInfo);
       console.log(sellerInfo);
