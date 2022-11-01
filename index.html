@@ -97,13 +97,13 @@
                         <div class="radio-button">
                           <label class="tax-type">
                             <span class="tax-label">Filer</span>
-                            <input class="multisteps-form__input form-control" type="radio" value="filer" label="filer"
-                              placeholder="filer" name="taxType" id="taxType" />
+                            <input class="multisteps-form__input form-control" type="radio" value="4" label="filer"
+                              placeholder="filer" name="taxType" id="taxType" oninput="get_Total()" />
                           </label>
                           <label class="tax-type">
                             <span class="tax-label">Non</span>
-                            <input class="multisteps-form__input form-control" type="radio" value="Nonfiler" label="nonfiler"
-                              placeholder="nonfiler" name="taxType" id="taxType" />
+                            <input class="multisteps-form__input form-control" type="radio" value="10" label="nonfiler"
+                              placeholder="nonfiler" name="taxType" id="taxType" oninput="get_Total()"/>
                           </label>
                         </div>
                       </div>
@@ -130,7 +130,7 @@
                     <div class="form-row mt-4">
                       <div class="col-12 col-sm-6">
                         <input class="multisteps-form__input form-control" type="number" placeholder="Property Amount"
-                          name="propertyAmount" id="propertyAmount" />
+                          name="propertyAmount" id="propertyAmount" oninput="get_Total()"/>
                       </div>
                       <div class="col-12 col-sm-6 mt-4 mt-sm-0">
                         <input class="multisteps-form__input form-control" type="number" placeholder="Advance Tax" disabled
@@ -140,7 +140,7 @@
                     <div class="form-row mt-4">
                       <div class="col-12 col-sm-12">
                         <input class="multisteps-form__input form-control" type="number" placeholder="Total Amount" disabled
-                          name="totalAmount" id="totalAmount" />
+                          name="totalAmount" id="totalAmount"/>
                       </div>
                      
                     </div>
@@ -305,7 +305,8 @@
         propertyAmount: propertyAmount.value,
         totalAmount:totalAmount.value,
         advanceTax:advanceTax.value,
-        determinism:determinism.value
+        determinism:determinism.value,
+        taxType:taxType.value
       }
       let sellerInfo= {
         sellerCnic: sellerCnic.value,
@@ -316,13 +317,25 @@
         taxType:taxType.value,
         gainTax:gainTax.value
       }
-
-      advanceTax_field.addEventListener('input', (e)=>{
-        let get_adv = (advanceTax_field.value )
-      })
+      
+      
       console.log(buyerInfo);
       console.log(sellerInfo);
     });
+
+    var getPropertyAmount = document.getElementById('propertyAmount');
+    var taxAmount = document.getElementById('taxType');
+
+    function get_Total(){
+      var propertyamount = parseFloat(getPropertyAmount.value);
+      if(isNaN(propertyamount)) propertyamount=0;
+      var tax = parseFloat(taxAmount.value);
+      if(isNaN(tax)) tax = 0;
+      var result = propertyamount * tax;
+      console.log(result)
+      document.getElementById("totalAmount").value = result;
+    }
+
   </script>
 </body>
 
